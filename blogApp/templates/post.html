@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>BlogApp | {{articles.title}}</title>
+    {% else %}
+    <title>BlogApp</title>
+    {% endif %}
+</head>
+<body>
+        {% for article in articles %}
+        <p><h1><b>{{article.title}}</b></h1></p>
+        <p>Written by <i>{{article.author}}</i> and Posted on <b>{{article.date}}</b> </p>
+        <p>{{article.content}}</p>
+        <br><br>
+        
+        {%endfor%}
+</body>
+</html>
